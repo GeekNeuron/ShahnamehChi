@@ -11,32 +11,36 @@
 </head>
 <body class="light-theme">
 
-    <header id="theme-switcher">
-        <h1>شاهنامه‌چی</h1>
+    <header id="header">
+        <button id="back-button" class="hidden"> بازگشت</button>
+        <h1 id="header-title">شاهنامه‌چی</h1>
+        <div id="theme-switcher"></div>
     </header>
 
-    <main>
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="جستجو در میان ابیات و متون...">
+    <main id="main-container">
+        <div id="main-menu" class="visible">
+            <button class="menu-option" data-choice="nazm">به نظم</button>
+            <button class="menu-option" data-choice="nasr">به نثر</button>
+            <button class="menu-option" data-choice="settings">تنظیمات</button>
         </div>
 
-        <div class="controls">
-            <button id="show-nazm" class="active">نظم</button>
-            <button id="show-nasr">نثر</button>
+        <div id="sub-menu" class="hidden">
+            <h2 id="sub-menu-title"></h2>
+            <button class="menu-option" data-format="text">متنی</button>
+            <button class="menu-option" data-format="audio">صوتی</button>
         </div>
 
-        <div id="content-display" class="content">
+        <div id="content-section" class="hidden">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="جستجو...">
             </div>
-
-        <div class="audio-player">
-            <h2>پخش صوتی</h2>
-            <div id="audio-nazm">
-                <p>صوت شاهنامه به نظم</p>
-                <audio controls src="assets/audio/nazm-sample.mp3"></audio>
-            </div>
-            <div id="audio-nasr" style="display: none;">
-                <p>صوت شاهنامه به نثر</p>
-                <audio controls src="assets/audio/nasr-sample.mp3"></audio>
+            <div id="content-display" class="content">
+                </div>
+            <div id="audio-player-container" class="hidden">
+                <div id="audio-player" class="audio-player">
+                    <p id="audio-title"></p>
+                    <audio id="audio-element" controls src=""></audio>
+                </div>
             </div>
         </div>
     </main>
