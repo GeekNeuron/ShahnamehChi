@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شاهنامه‌چی</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-theme">
+
+    <header id="theme-switcher">
+        <h1>شاهنامه‌چی</h1>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="جستجو در میان ابیات و متون...">
+        </div>
+
+        <div class="controls">
+            <button id="show-nazm" class="active">نظم</button>
+            <button id="show-nasr">نثر</button>
+        </div>
+
+        <div id="content-display" class="content">
+            </div>
+
+        <div class="audio-player">
+            <h2>پخش صوتی</h2>
+            <div id="audio-nazm">
+                <p>صوت شاهنامه به نظم</p>
+                <audio controls src="assets/audio/nazm-sample.mp3"></audio>
+            </div>
+            <div id="audio-nasr" style="display: none;">
+                <p>صوت شاهنامه به نثر</p>
+                <audio controls src="assets/audio/nasr-sample.mp3"></audio>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
